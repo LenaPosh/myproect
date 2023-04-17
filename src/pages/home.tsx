@@ -1,6 +1,6 @@
 import React from "react";
 import {MainMenu} from "../components/MainMenu";
-import {Screen} from "../components/Screen";
+import {Screen} from "../components/layouts";
 import {Footer} from "../components/Footer";
 
 
