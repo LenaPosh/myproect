@@ -5,7 +5,7 @@ import {Footer} from "../components/Footer";
 import {Plate} from "../components/Plate";
 import {SmColumn} from "../components/layouts";
 import {SignupForm} from "../components/SignupForm";
-import {SingupFormData} from "../entities";
+import {SignupFormData} from "../entities";
 import {useNavigate} from "react-router-dom";
 import * as api from "../api";
 import {Notification} from "../components/Notification";
@@ -15,7 +15,7 @@ export const SignupPage: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string>();
     const navigate = useNavigate();
-    function handleSubmit(form: SingupFormData) {
+    function handleSubmit(form: SignupFormData) {
         setLoading(true);
         setError(undefined);
 

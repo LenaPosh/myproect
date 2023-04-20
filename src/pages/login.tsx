@@ -5,7 +5,7 @@ import {Footer} from "../components/Footer";
 import {Plate} from "../components/Plate";
 import {SmColumn} from "../components/layouts";
 import {SignupForm} from "../components/SignupForm";
-import {LoginFormData, SingupFormData} from "../entities";
+import {LoginFormData, SignupFormData} from "../entities";
 import {LoginForm} from "../components/LoginForm";
 
 

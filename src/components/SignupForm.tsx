@@ -1,14 +1,14 @@
 import {Alert, ButtonGroup, Input, InputGroup} from "./form";
 import React, {useState} from "react";
 import {createInterface} from "readline";
-import {SingupFormData} from "../entities";
+import {SignupFormData} from "../entities";
 import {PrimaryButton} from "./buttons";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 
 interface Props {
-    onSubmit: (form: SingupFormData) => void;
+    onSubmit: (form: SignupFormData) => void;
 }
 
 interface Form {

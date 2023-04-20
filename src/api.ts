@@ -1,5 +1,5 @@
 import axios from "axios";
-import {SingupFormData} from "./entities";
+import {SignupFormData, User} from "./entities";
 
 interface SignupResponse {
     ok: boolean;
@@ -7,13 +7,14 @@ interface SignupResponse {
     emailTaken?: boolean;
 }
 
-export async function signup(formData: SingupFormData): Promise<SignupResponse> {
+export async function signup(formData: SignupFormData): Promise<SignupResponse> {
     try {
         const res = await axios.post<User>("/api/signup", formData)
         return {
             ok: true,
             user: res.data,
         }
+
     } catch (err) {
         if (axios.isAxiosError(err) && err.response?.status === 409) {
             return {
@@ -21,6 +22,7 @@ export async function signup(formData: SingupFormData): Promise<SignupResponse> 
                 emailTaken: true,
             }
         }
+
         return {
             ok: false,
         }
